@@ -234,37 +234,32 @@
                         }
                     }
 
+
                     .rainbow-text {
+                        display: block;
+                        width: 100%;
+
                         font-size: 3rem;
                         font-weight: 900;
-                        min-height: 4.5rem;
-                        margin-bottom: 20px;
-                        display: inline-block;
+                        line-height: 1.2;
 
-                        /* 무지개색 그라데이션 설정 */
-                        background: linear-gradient(to right, #ff2400, #e81d62, #9c27b0, #3f51b5, #00bcd4, #4caf50, #ffeb3b, #ff9800, #ff2400);
-                        background-size: 200% auto;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
+                        /* ⭐ 핵심: 2줄 공간 고정 확보 */
+                        min-height: calc(1.2em * 2);
 
-                        /* 애니메이션 속도 (4초 동안 부드럽게 반복) */
-                        animation: rainbow-flow 4s linear infinite;
-
-                        display: inline-block;
-                        white-space: nowrap;
+                        /* 흔들림 방지 */
                         overflow: hidden;
-                        height: 4.5rem;
 
-
-                        font-size: 3rem;
-
+                        /* 줄바꿈 허용 */
                         white-space: normal;
                         word-break: break-word;
 
-                        min-height: 9rem;
-                        line-height: 1.2;
-
-                        display: block;
+                        background: linear-gradient(to right,
+                                #ff2400, #e81d62, #9c27b0, #3f51b5,
+                                #00bcd4, #4caf50, #ffeb3b, #ff9800, #ff2400);
+                        background-size: 200% auto;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation: rainbow-flow 4s linear infinite;
                     }
 
                     .logo-wrap {
